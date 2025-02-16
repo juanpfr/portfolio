@@ -134,6 +134,7 @@
 
     .project-info {
         margin: 0 10px;
+        padding: 8px;
     }
 }
 
@@ -169,7 +170,7 @@
     }
 
     .carousel-item {
-        min-width: 42.1%;
+        min-width: 37.1%;
     }
 
     .about-section {
@@ -248,6 +249,18 @@
 
     .skills-section, .icons-section {
         margin-bottom: 80px;
+    }
+}
+
+/* Telas até 403px de largura */
+
+@media (max-width: 403px){
+    .tech {
+        padding: 0 18%;
+    }
+
+    .carousel-item {
+        min-width: 35.1%;
     }
 }
 
