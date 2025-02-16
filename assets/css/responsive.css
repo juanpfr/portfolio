@@ -1,0 +1,280 @@
+/* Telas até 1366px de largura */
+
+@media (max-width: 1366px){
+
+    .image-1{
+        margin-top: -400px;
+    }
+
+    .image-2 {
+        margin-top: -610px;
+    }
+
+    .image-3{
+        margin-top: -140px;
+    }
+
+    .image-4 {
+        margin-top: -300px;
+    }
+
+    .about-section{
+        margin-top: 40px;
+        gap: 0;
+    }
+
+    .project-info{
+        margin: 0 10px;
+    }
+}
+
+/* Telas até 1280px de largura */
+
+@media (max-width: 1280px){
+
+    .image-1 {
+        margin-top: -300px;
+    }
+
+    .image-2 {
+        margin-top: -540px;
+        margin-right: -160px;
+    }
+
+    .image-3{
+        margin-top: -20px;
+    }
+
+    .image-4 {
+        margin-top: -200px;
+    }
+
+    .about{
+        margin-bottom: 40px;
+    }
+
+    .imagem-container img {
+        width: 70%;
+        margin: 12% 40%;
+    }
+
+    .project-info {
+        margin: 0 5px;
+    }
+    
+}
+
+/* Telas até 1024px de largura */
+
+@media (max-width: 1024px){
+
+    #main-content {
+        height: 100%;
+        scroll-snap-type: none;
+        scroll-behavior: none;
+    }
+
+    section {
+        scroll-snap-align: none;
+        width: auto;
+        height: 100dvh;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .image-1 {
+        margin-top: -330px;
+    }
+
+    .image-2 {
+        margin-right: 100px;
+        margin-top: -570px;
+    }
+
+    .image-3 {
+        display: none;
+    }
+
+    .image-4 {
+        display: none;
+    }
+
+    .about {
+        padding: 0 5%;
+    }
+    .about-text p {
+        min-height: 11em;
+    }
+
+    .imagem-container img {
+        top: -120px;
+        width: 60%;
+        margin: 0 30%;
+    }
+
+    .project-section{
+        z-index: 1;
+    }
+
+    .contact-section{
+        z-index: 0;
+    }
+
+    .modal-content {
+        margin: 40% auto;
+        width: 80%;
+        height: 60%;
+    }
+
+    .carousel-item {
+        min-width: 33%;
+    }
+
+    .project-info {
+        margin: 0 10px;
+    }
+}
+
+/* Telas até 768px de largura */
+
+@media (max-width: 768px){
+
+    .margin {
+        margin: 10%;
+    }
+    
+    .image-1 {
+        margin-top: -430px;
+    }
+    
+    .image-2 {
+        margin-right: 150px;
+        margin-top: -700px;
+    }
+
+    .about-image{
+        width: 30%;
+    }
+
+    .imagem-container img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .tech {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .carousel-item {
+        min-width: 42.1%;
+    }
+
+    .about-section {
+        gap: 80px;
+    }
+}
+
+/* Telas até 414px de largura */
+
+@media (max-width: 414px){
+
+    ::-webkit-scrollbar {
+        width: 5px; /* Largura da barra de rolagem */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .margin {
+        margin: 5%;
+    }
+
+    .image-1 {
+        margin-right: 100px;
+    }
+
+    .image-2{
+        display: none;
+    }
+
+    .about div {
+        flex-direction: column;
+    }
+
+    .about h2 {
+        font-size: 3em;
+    }
+
+    .about-text h3 {
+        font-size: 1.5em;
+        text-align: start;
+        margin-bottom: 80px;
+        margin-left: 10%;
+    }
+
+    .about-text p {
+        margin: 0 10%;
+    }
+
+    .imagem-container img {
+        width: 30%;
+        margin: 0 45%;
+        top: -410px;
+    }
+
+    .about-section {
+        gap: 0;
+    }
+
+    .tech{
+        padding: 0 7%;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .contact-section > div {
+        flex-direction: column;
+    }
+
+    .skills-section, .icons-section {
+        margin-bottom: 80px;
+    }
+}
+
+/* Telas até 390px de largura */
+
+@media (max-width: 390px){
+    .tech {
+        padding: 0 17%;
+    }
+
+    .carousel-item {
+        min-width: 39.1%;
+    }
+}
+
+/* Telas até 375px de largura */
+
+@media (max-width: 375px){
+    .tech {
+        padding: 0 16%;
+    }
+
+    .project-section {
+        margin: 100px 0;
+    }
+
+    .project-info {
+        margin: 0 5px;
+    }
+}

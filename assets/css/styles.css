@@ -1,0 +1,851 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4,
+h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
+audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+nav, section {
+    display: block;
+}
+
+body, html {
+    line-height: 1;
+    overflow: hidden;
+    height: 100%;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Fontes */
+
+/* JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@100..800&display=swap');
+
+/* Meu CSS */
+
+/* Corpo */
+body {
+    font-family: "JetBrains Mono", serif;
+    font-size: 12px;
+    font-style: normal;
+    background-color: #000;
+    color: white;
+}
+
+/* Personalizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #000; /* Fundo da trilha da barra */
+}
+
+/* Cor e arredondamento da "alavanca" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #00e1ff; /* Cor branca para a alavanca */
+    background-clip: content-box; /* Faz a borda ficar visível */
+}
+
+/* Efeito de hover na alavanca */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1a5158; /* Cor azul claro quando passar o mouse */
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: 100%; /* O main-content vai ocupar toda a altura da tela */
+    overflow-y: auto; /* Habilita o scroll vertical */
+    scroll-snap-type: y mandatory; /* Aplica o scroll-snap no eixo Y */
+    scroll-behavior: smooth; /* Efeito de rolagem suave */
+}
+
+/* Seções com snap */
+section {
+    scroll-snap-align: start; /* Faz com que o scroll 'fixe' no topo da seção */
+    width: 100dvw;
+    min-height: 100dvh; /* Garante que cada seção ocupe ao menos a tela inteira */
+}
+
+/* Seção principal */
+.hero-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Vídeo de fundo */
+.hero-section .wallpaper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.margin{
+	margin-bottom: -10%;
+}
+
+.flex{
+	display: flex;
+	flex-direction: column;
+}
+
+/* Conteúdo principal */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Garante que o texto fique acima do vídeo */
+    text-align: center;
+    color: #fff;
+}
+
+/* Otimização do video */
+.hero-section video {
+    will-change: transform; /* Sugere ao navegador otimizar as animações */
+    transform: translateZ(0); /* Força o navegador a renderizar em 3D */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Tratamento dos kanjis */
+.hero-images {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: -30%;
+}
+
+.image-1 {
+    width: 100px;
+    margin-top: -500px;
+    animation: shake 1s infinite;
+}
+
+.image-2 {
+    width: 120px;
+    margin-top: -750px;
+    margin-right: -200px;
+    animation: shake 1s infinite;
+}
+
+.image-3 {
+    width: 60px;
+    margin-top: -200px;
+    animation: shake 1s infinite;
+}
+
+.image-4 {
+    width: 80px;
+    margin-top: -400px;
+    animation: shake 1s infinite;
+}
+
+/* Animação dos kanjis */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Botões do github e linkedin */
+.hero-buttons{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 200px;
+}
+
+.hero-buttons div{
+	display: flex;
+	align-items: center;
+	padding: 10px 30px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	gap: 10px;
+}
+
+.hero-buttons div:hover{
+	border: 1px solid #00e1ff;
+	transform: scale(1.1);
+}
+
+.hero-buttons img{
+	width: 25px;
+}
+
+.hero-buttons p{
+	font-size: 1.2em;
+}
+
+.hero-section .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 2%;
+}
+
+/* Animação de "pulo" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Ocultar a seta */
+.scroll-indicator.hidden {
+    display: none;
+}
+
+/* Seta de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-indicator:hover {
+    color: #00e1ff;
+}
+
+/* Animação de "pulo" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Ocultar a seta */
+.scroll-indicator.hidden {
+    display: none;
+}
+
+/* Seção sobre */
+
+.about-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /*background: linear-gradient(to bottom,#000,#003b42);*/
+    gap: 80px;
+}
+
+.about {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20%;
+    margin-bottom: 100px;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 4em;
+}
+
+.about div{
+    display: flex;
+    gap: 80px;
+}
+
+.about-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+.about-text div {
+    width: 100%;
+}
+
+.about-text h3 {
+    font-size: 2em;
+    text-align: start;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: justify;
+    visibility: hidden;
+    white-space: pre-wrap;
+    overflow: hidden;
+    min-height: 7em;
+}
+
+.about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-container {
+    position: relative;
+    width: 400px; /* O mesmo tamanho que você estava usando */
+    height: auto;
+    perspective: 1000px; /* Dá a sensação de profundidade */
+}
+
+.imagem-container img {
+    position: absolute;
+    top: -185px;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; /* Impede que o verso da imagem seja visível quando girada */
+    transition: transform 0.6s;
+}
+
+.frente {
+    z-index: 2; /* A imagem da frente aparece por cima inicialmente */
+}
+
+.imagem-container:hover .frente {
+    transform: rotateY(180deg); /* Gira a imagem da frente ao passar o mouse */
+}
+
+.imagem-container:hover .verso {
+    transform: rotateY(0deg); /* A imagem do verso aparece ao passar o mouse */
+}
+
+.verso {
+    transform: rotateY(-180deg); /* Inicialmente, a imagem do verso está virada */
+}
+
+
+/* Animação de digitação */
+
+.typing-text {
+    visibility: hidden; /* Esconde o texto inicialmente */
+    white-space: pre-wrap; /* Mantém quebras de linha */
+    overflow: hidden; /* Garante que o texto "corte" durante a animação */
+    animation: blink-cursor 0.6s steps(1) infinite;
+}
+
+/* Tecnologias */
+.tech {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 50px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.tech h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+}
+
+.tech-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.tech-item {
+    position: relative;
+    text-align: center;
+}
+
+.tech-list img {
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.tech-list img:hover {
+    transform: scale(1.5);
+}
+
+.tech-item::after {
+    content: attr(data-tech);
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-item:hover::after {
+    opacity: 1;
+}
+
+/* Seção dos projetos */
+
+.project-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-section h2{
+    font-size: 3em;
+    margin: 50px 0;
+}
+
+.project-item {
+    border-radius: 10px;
+    border: 2px solid #00e1ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Garantir que o link cobre todo o item */
+.project-info {
+    padding: 15px;
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: fill;
+    border: 2px solid #00e1ff;
+}
+
+
+.project-info h4 {
+    font-size: 1.05rem;
+    margin: 20px 0;
+    color: #fff;
+}
+
+/* Adicionando a lista de tecnologias */
+.project-tech {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.project-tech img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin: 0 0 10px 10px;
+}
+
+/* Efeito de hover no item do projeto */
+.project-item:hover {
+    transform: scale(1.02); /* Aumenta o tamanho do item */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+/* Estilo para os botões de Deploy e GitHub */
+.project-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.button {
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    font-family: "JetBrains Mono", serif;
+    font-size: 1.2em;
+    font-style: normal;
+    background-color: #00e1ff;
+    border: 1px solid;
+}
+
+/* Botão Deploy */
+.deploy {
+    border: 1px solid #00e1ff;
+}
+
+.deploy:hover {
+    background-color: #1a5158;
+}
+
+/* Botão GitHub */
+.github {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.github:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilo do carrossel */
+#carousel-container {
+    position: relative;
+    width: 80%;
+}
+  
+#carousel {
+    display: flex;
+    overflow: hidden;
+}
+  
+#carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 380px;
+}
+  
+.carousel-item {
+    min-width: 25%; /* 4 itens visíveis no desktop */
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+  
+.project-info {
+    background-color: #222;
+    border-radius: 10px;
+    border: 2px solid #00e1ff;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 30px;
+}
+  
+.project-info:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+  
+.project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #00e1ff;
+}
+  
+.project-tech {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+  
+.project-tech img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+  
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00e1ff;
+    color: #000;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+  
+#prev {
+    left: -40px;
+}
+  
+#next {
+    right: -40px;
+}
+
+  /* Estilo dos botões desativados */
+.arrow.disabled {
+    opacity: 0.3; /* Diminui a opacidade para indicar que está desativado */
+    pointer-events: none; /* Desativa o clique */
+    cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1; /* Garante que o modal fique em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    color: white;
+    position: relative; /* Necessário para o botão de fechar se posicionar corretamente */
+}
+
+/* Título no modal (h4) */
+.modal-content h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Descrição no modal (p) */
+.modal-content p {
+    font-size: 1rem;
+    color: #acacac;
+    margin-top: 20px;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.close {
+    color: #000;
+    font-size: 60px;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    cursor: pointer;
+    padding: 0 12px;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+/* Efeito de hover no botão "Ver Mais" */
+.see-more:hover {
+    background-color: #1a5158;
+}
+
+/* Seção soft skills e contato */
+
+.contact-section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-section > div{
+    width: 100%;
+}
+
+.content-contact-section{
+    width: 100%;
+    display: flex;
+}
+
+.skills-section, .icons-section {
+    width: 100%;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 326px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-section h2 {
+    font-size: 3em;
+    margin: 0 0 40px 0;
+}
+
+.icons-section h2{
+    font-size: 3em;
+    margin: 0 0 40px 0;
+}
+
+/* Cards */
+.card-skills {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #00e1ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-contact {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-skills:hover {
+    transform: scale(1.05);
+}
+
+.card-contact:hover {
+    transform: scale(1.05);
+    border: 1px solid #00e1ff;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.card-skills p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #00e1ff;
+    margin-top: 10px;
+}
+
+.card-contact p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 326px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+}
