@@ -1,2 +1,2 @@
-# Meu portifólio
-Este é o meu portifólio, aqui estão minhas habilidades e competências.
+# Meu portfólio
+Este é o meu portfólio, aqui estão minhas habilidades e competências.
