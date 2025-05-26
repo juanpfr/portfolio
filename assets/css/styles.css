@@ -1,0 +1,265 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body,
+html {
+    line-height: 1;
+    overflow: hidden;
+    height: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Fonte */
+
+/* JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@100..800&display=swap');
+
+/* Tiny5 */
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+/* Meu CSS */
+body {
+    background-color: #530bc0;
+    background-image: url(../images/backgrounds/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "JetBrains Mono", serif;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+/* Barra de navegação */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+nav .logo p{
+    font-family: "Tiny5", sans-serif;
+    display: flex;
+    font-size: 3em;
+    color: #BF0BAD;
+}
+
+nav .logo p:hover{
+    color: #BF0BAD;
+    transition: 0.3s;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav ul li a{
+    font-size: 1.4em;
+}
+
+nav ul li a:hover{
+    color: #BF0BAD;
+    transition: 0.3s;
+}
+
+.menu-icon{
+    display: none;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transform: translateY(-50%);
+    transition: .5s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-icon::before,
+.menu-icon::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.menu-icon::before{
+    top: -8px;
+}
+
+.menu-icon::after{
+    top: 8px;
+}
+
+.menu-icon.active{
+    background: rgba(0, 0, 0, 0);
+}
+
+.menu-icon.menu-icon.active::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-icon.active::after{
+    top: 0;
+    transform: rotate(135deg);
+}
+
+/* Início */
+main{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
