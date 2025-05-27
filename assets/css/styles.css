@@ -1,147 +1,3 @@
-/* Reset CSS */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body,
-html {
-    line-height: 1;
-    overflow: hidden;
-    height: 100%;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 /* Fonte */
 
 /* JetBrains Mono */
@@ -166,7 +22,6 @@ body {
 .main-div{
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
 }
 
 /* Barra de navegação */
@@ -257,9 +112,103 @@ nav ul li a:hover{
 }
 
 /* Início */
-main{
+
+main {
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
+    min-height: 100dvh;
+}
+
+.main-content-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.left-text {
+    flex: 1 1 320px;
+    text-align: center;
+}
+
+.left-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.left-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-download {
+    padding: 10px 20px;
+    background-color: #BF0BAD;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-download:hover {
+    background-color: #8a047b;
+    transform: scale(1.05);
+}
+
+.right-image {
+    flex: 1 1 320px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 25px;
+    z-index: 1;
+    position: relative;
+}
+
+
+.kanji {
+    position: absolute;
+    z-index: 1;
+    animation: tremor 0.2s infinite alternate;
+    opacity: 0.9;
+}
+
+.kanji-1 {
+    width: 120px;
+    bottom: 42%;
+    right: 25%;
+}
+
+.kanji-2 {
+    width: 100px;
+    bottom: 67%;
+    right: 6%;
+}
+
+.kanji-3 {
+    width: 80px;
+    bottom: 80%;
+    right: 22%;
+}
+
+.kanji-4 {
+    width: 60px;
+    bottom: 100%;
+}
+
+@keyframes tremor {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(2px, -2px) rotate(1deg); }
 }

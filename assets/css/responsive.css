@@ -25,12 +25,21 @@
     .menu-icon{
         display: block;
     }
+
 }
 
 /* Até 767px */
 @media screen and (max-width: 767px){
     nav{
         padding: 0 50px;
+    }
+
+    .left-text {
+        text-align: center;
+    }
+
+    .right-image {
+        margin-top: 2rem;
     }
 }
 
