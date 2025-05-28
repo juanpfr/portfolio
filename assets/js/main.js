@@ -1,4 +1,6 @@
 // Meu Script
+
+// Menu responsivo
 const menuIcon = document.querySelector(".menu-icon");
 const navList = document.querySelector("ul");
 
