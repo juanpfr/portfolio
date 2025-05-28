@@ -26,7 +26,6 @@ body {
 
 /* Barra de navegação */
 nav{
-    position: fixed;
     top: 0;
     width: 100%;
     padding: 0 100px;
@@ -117,10 +116,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100dvh;
+    flex-direction: column;
+    margin-top: 10%;
 }
 
-.main-content-div {
+.main-section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -214,3 +214,6 @@ main {
     0% { transform: translate(0, 0) rotate(0deg); }
     100% { transform: translate(3px, -3px) rotate(1deg); }
 }
+
+/* Sobre */
+
