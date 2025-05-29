@@ -10,7 +10,7 @@
 body {
     background-color: #530bc0;
     background-image: url(../images/backgrounds/background.jpg);
-    background-size: cover;
+    /*background-size: cover;*/
     background-repeat: no-repeat;
     font-family: "JetBrains Mono", serif;
     font-size: 12px;
@@ -225,7 +225,9 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 50%;
+    max-width: 65%;
+    background-color: black;
+    padding: 20px;
 }
 
 .about-content{
@@ -258,6 +260,11 @@ main {
     font-size: 1.2em;
 }
 
+.about-text p{
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
 .about-level{
     display: flex;
     font-size: 1.2em;
@@ -282,6 +289,7 @@ main {
     padding: 5px 50px 5px 10px;
     border-radius: 3px;
     margin-top: 10px;
+    border: 1px solid;
 }
 
 .about-medal img{
@@ -293,4 +301,51 @@ main {
     flex-direction: column;
     justify-content: center;
     margin-left: 10px;
+}
+
+.about-tech{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about-tech-up{
+    background-color: #202020;
+    padding: 10px 30px 10px 20px;
+    border-radius: 3px;
+    border: 1px solid;
+    margin-top: 10px;
+}
+
+.about-tech-title{
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+
+.about-tech-image{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.about-tech-image div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-tech-image img{
+    width: 50px;
+}
+
+.about-tech-image p{
+    text-align: center;
+}
+
+.about-tech-title h2{
+    font-size: 2em;
 }
