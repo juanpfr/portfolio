@@ -1,7 +1,11 @@
 /* Até 992px */
 
 @media screen and (max-width: 992px){
+    nav ul.active{
+        display: flex;
+    }
     nav ul{
+        display: none;
         position: fixed;
         top: 80px;
         left: 100%;
@@ -26,6 +30,10 @@
         display: block;
     }
 
+    .main-section{
+        z-index: -1;
+    }
+
 }
 
 /* Até 767px */
@@ -39,7 +47,7 @@
     }
 
     .right-image {
-        margin-top: 2rem;
+        margin: 2rem;
     }
 }
 

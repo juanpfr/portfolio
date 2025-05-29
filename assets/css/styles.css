@@ -117,21 +117,20 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 10%;
 }
 
 .main-section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 3rem;
-    max-width: 1200px;
     width: 100%;
+    max-width: 80%;
+    margin: 10% 0;
 }
 
 .left-text {
-    flex: 1 1 320px;
     text-align: center;
 }
 
@@ -163,10 +162,14 @@ main {
 }
 
 .right-image {
-    flex: 1 1 320px;
-    position: relative;
     display: flex;
     justify-content: center;
+}
+
+.me{
+    background: black;
+    border-radius: 50% 50% 30% 30%;
+    box-shadow: 5px 5px 5px 5px black;
 }
 
 .profile-img {
@@ -174,6 +177,7 @@ main {
     width: 100%;
     z-index: 1;
     position: relative;
+    border-radius: 30%;
 }
 
 
@@ -194,20 +198,20 @@ main {
 
 .kanji-2 {
     width: 100px;
-    bottom: 70%;
-    right: 0;
+    bottom: 59%;
+    right: 10%;
 }
 
 .kanji-3 {
     width: 80px;
-    bottom: 81%;
+    bottom: 67%;
     right: 15%;
 }
 
 .kanji-4 {
     width: 60px;
-    bottom: 98%;
-    right: 0;
+    bottom: 76%;
+    right: 10%;
 }
 
 @keyframes tremor {
@@ -217,3 +221,76 @@ main {
 
 /* Sobre */
 
+.about-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50%;
+}
+
+.about-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-image{
+    border: 3px dashed #8a047b;
+}
+
+.about-image img{
+    width: 200px;
+    height: 200px;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    margin-left: 2%;
+}
+
+.about-text h2{
+    font-size: 1.7em;
+}
+
+.about-text h3{
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.about-level{
+    display: flex;
+    font-size: 1.2em;
+}
+
+.about-level div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-level div:nth-child(2){
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.about-medal{
+    display: flex;
+    background: #202020;
+    padding: 5px 50px 5px 10px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.about-medal img{
+    width: 50px;
+}
+
+.about-medal div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
