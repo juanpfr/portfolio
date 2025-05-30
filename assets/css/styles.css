@@ -225,7 +225,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 65%;
+    max-width: 60%;
     background-color: black;
     padding: 20px;
 }
@@ -309,6 +309,10 @@ main {
     margin-top: 40px;
 }
 
+.about-tech-left{
+    flex: 1;
+}
+
 .about-tech-up{
     background-color: #202020;
     padding: 10px 30px 10px 20px;
@@ -322,16 +326,15 @@ main {
     padding: 10px;
 }
 
-.about-tech-image{
+.about-tech-image {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 20px;
     gap: 30px;
-    max-width: 600px;
 }
 
-.about-tech-image div{
+.about-tech-image div {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,16 +342,45 @@ main {
     gap: 5px;
 }
 
-.about-tech-image img{
+.about-tech-image img {
     width: 40px;
+    cursor: pointer;
 }
 
-.about-tech-image p{
+.about-tech-image p {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 14px;
     text-align: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-tech-image p::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.about-tech-image div:hover p {
+    display: block;
+    opacity: 1;
 }
 
 .about-tech-title h2{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .about-tech-down {
@@ -357,4 +389,133 @@ main {
     border-radius: 3px;
     border: 1px solid;
     margin-top: 40px;
+}
+
+.about-fav-project{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-fav-project-image{
+    padding: 20px;
+}
+
+.about-fav-project-image img{
+    max-width: 250px;
+}
+
+.about-fav-project-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.about-fav-project-content h3{
+    font-size: 1.5em;
+}
+
+.about-fav-project-content > p{
+    font-size: 1.2em;
+}
+
+.about-fav-project-content > div{
+    display: flex;
+    gap: 30px;
+}
+
+.about-fav-project-content > div div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-fav-project-content > div div h4{
+    font-size: 1.3em;
+}
+
+.about-fav-project-content > div div p{
+    font-size: 1.3em;
+}
+
+.about-tech-right{
+    background: #202020;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.about-tech-right > div{
+    padding: 20px;
+}
+
+.on-line p{
+    font-size: 2em;
+    color: darkcyan;
+}
+
+.about-tech-right a{
+    font-size: 1.2em;
+}
+
+.about-tech-right a img{
+    width: 15px;
+}
+
+.about-subtitle h3{
+    font-size: 1.3em;
+}
+
+.about-tech-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about-tech-skills div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-tech-skills img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.about-tech-skills p {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-tech-skills p::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.about-tech-skills div:hover p {
+    display: block;
+    opacity: 1;
 }
