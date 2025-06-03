@@ -231,8 +231,9 @@ main {
     flex-direction: column;
     width: 100%;
     max-width: 60%;
-    background-color: black;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
     padding: 20px;
+    border-radius: 10px 10px 0 0;
 }
 
 .about-content {
@@ -322,8 +323,6 @@ main {
     background-color: #202020;
     padding: 10px 30px 10px 20px;
     border-radius: 3px;
-    border: 1px solid;
-    margin-top: 10px;
 }
 
 .about-tech-title {
@@ -392,7 +391,6 @@ main {
     background-color: #202020;
     padding: 10px 30px 10px 20px;
     border-radius: 3px;
-    border: 1px solid;
     margin-top: 40px;
 }
 
@@ -529,7 +527,6 @@ main {
 /* Projetos */
 .carousel-section {
     padding: 60px 20px;
-    background: #000;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -572,10 +569,11 @@ main {
 
 .carousel-card {
     flex: 0 0 300px;
-    background: white;
+    background: rgba(83, 11, 192, 0.2);
     border-radius: 16px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     padding: 16px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
@@ -596,7 +594,7 @@ main {
 
 .carousel-card p {
     font-size: 0.95rem;
-    color: #555;
+    color: #00f7ff;
     margin-bottom: 10px;
     flex-grow: 1;
 }
@@ -604,31 +602,36 @@ main {
 .button-group {
     display: flex;
     gap: 8px;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .btn {
     padding: 8px 12px;
-    background: #007bff;
-    color: white;
+    background: #00f7ff;
+    color: black;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.3em;
     transition: 0.3s;
+    border: 2px transparent solid;
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #21044d;
+    border: 2px solid white;
+    color: white;
 }
 
 .btn-outline {
     background: transparent;
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #00f7ff;
+    color: #00f7ff;
 }
 
 .btn-outline:hover {
-    background: #007bff;
+    border: 2px solid white;
+    background: #21044d;
     color: white;
 }
 
@@ -636,18 +639,18 @@ main {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 10px 0;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .tech-icons img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+height: 47px;
   object-fit: contain;
 }
 
 .carousel-btn {
-    background: #BF0BAD;
+    background: white;
     border: none;
     font-size: 2rem;
     padding: 5px 15px 10px 15px;
@@ -660,7 +663,7 @@ main {
 
 .carousel-btn:hover {
     transform: scale(1.1);
-    background-color: #8a047b;
+    background-color: #42023b;
 }
 
 .carousel-btn.left {
