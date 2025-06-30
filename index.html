@@ -34,16 +34,16 @@
 </head>
 
 <body>
-    <header>
+    <header id="inicio">
         <nav>
             <div class="logo">
                 <p>Juanpfr</p>
             </div>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
             <div class="menu-icon"></div>
         </nav>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-section">
+        <section id="sobre" class="about-section">
             <div class="about-content">
                 <div class="about-image">
                     <img src="assets/images/perfil/wonderofyou.jpg" alt="Foto perfil">
@@ -210,114 +210,99 @@
                 </div>
             </div>
         </section>
-        <section class="carousel-section">
-            <h2>Meus Projetos</h2>
-
-            <div class="carousel-wrapper">
-                <!-- Botão esquerdo -->
-                <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
-
-                <!-- Carrossel visível (limitado a 80%) -->
-                <div class="carousel-container">
-                    <div class="carousel-track" id="carousel">
-                        <!-- Cards de Projeto -->
-                        <div class="carousel-card">
-                            <img src="assets/images/projects/projetoAutoMestre.png" alt="Auto Mestre ">
-                            <h3>Auto Mestre Desktop</h3>
-                            <p>Aplicativo de cadastro e gerenciamento de uma mecânica.</p>
-
-                            <!-- Tecnologias utilizadas -->
-                            <div class="tech-icons">
-                                <img src="assets/images/icons/csharp.png" alt="CSHARP">
-                            </div>
-
-                            <!-- Botões -->
-                            <div class="button-group">
-                                <a href="#" class="btn">Deploy</a>
-                                <a href="#" class="btn btn-outline">GitHub</a>
-                            </div>
-                        </div>
-
-                        <div class="carousel-card">
-                            <img src="assets/images/projects/projetoTeachercamila.png" alt="Teacher Camila">
-                            <h3>Teacher Camila</h3>
-                            <p>Site com cadastro, login dos alunos e agendamento das aulas.</p>
-
-                            <!-- Tecnologias utilizadas -->
-                            <div class="tech-icons">
-                                <img src="assets/images/icons/html-5.png" alt="HTML">
-                                <img src="assets/images/icons/css-3.png" alt="CSS">
-                                <img src="assets/images/icons/js.png" alt="JavaScript">
-                                <img src="assets/images/icons/php.png" alt="PHP">
-                                <img src="assets/images/icons/mysql.png" alt="MySQL">
-                            </div>
-
-                            <!-- Botões -->
-                            <div class="button-group">
-                                <a href="#" class="btn">Deploy</a>
-                                <a href="#" class="btn btn-outline">GitHub</a>
-                            </div>
-                        </div>
-
-                        <div class="carousel-card">
-                            <img src="assets/images/projects/clinicamatarazzo.png" alt="Clínica Matarazzo">
-                            <h3>Clínica Matarazzo</h3>
-                            <p>Site institucional simples de uma clínica oftalmológica.</p>
-
-                            <!-- Tecnologias utilizadas -->
-                            <div class="tech-icons">
-                                <img src="assets/images/icons/html-5.png" alt="HTML">
-                                <img src="assets/images/icons/css-3.png" alt="CSS">
-                            </div>
-
-                            <!-- Botões -->
-                            <div class="button-group">
-                                <a href="#" class="btn">Deploy</a>
-                                <a href="#" class="btn btn-outline">GitHub</a>
-                            </div>
-                        </div>
-
-                        <div class="carousel-card">
-                            <img src="assets/images/projects/projetoTeachercamilaDesktop.jpg" alt="Teacher Camila Desktop">
-                            <h3>Teacher Camila Desktop</h3>
-                            <p>Aplicativo para gerenciar os cadastros e ativos do site.</p>
-
-                            <!-- Tecnologias utilizadas -->
-                            <div class="tech-icons">
-                                <img src="assets/images/icons/csharp.png" alt="CSHARP">
-                            </div>
-
-                            <!-- Botões -->
-                            <div class="button-group">
-                                <a href="#" class="btn">Deploy</a>
-                                <a href="#" class="btn btn-outline">GitHub</a>
-                            </div>
-                        </div>
-
-                        <div class="carousel-card">
-                            <img src="assets/images/projects/space_blaster.png" alt="Space Blaster">
-                            <h3>Space Blaster</h3>
-                            <p>Jogo com níveis de dificuldade, diferentes fases e boss final.</p>
-
-                            <!-- Tecnologias utilizadas -->
-                            <div class="tech-icons">
-                                <img src="assets/images/icons/python.png" alt="Python">
-                            </div>
-
-                            <!-- Botões -->
-                            <div class="button-group">
-                                <a href="#" class="btn">Deploy</a>
-                                <a href="#" class="btn btn-outline">GitHub</a>
-                            </div>
-                        </div>
-                        <!-- Projetos futuros -->
+        <section id="projetos" class="category-project-section">
+            <div>
+                <h2>Projetos</h2>
+            </div>
+            <div class="category-projects">
+                <div class="category-projetcs-card">
+                    <div>
+                        <img src="assets/images/icons/desenvolvimento_web.png" alt="Desenvolvimento web">
+                    </div>
+                    <div>
+                        <h3>Desenvolvimento Web</h3>
+                    </div>
+                    <div>
+                        <a href="">Ver projetos</a>
                     </div>
                 </div>
-
-                <!-- Botão direito -->
-                <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+                <div class="category-projetcs-card">
+                    <div>
+                        <img src="assets/images/icons/desenvolvimento_desktop.png" alt="Desenvolvimento desktop">
+                    </div>
+                    <div>
+                        <h3>Desenvolvimento Desktop</h3>
+                    </div>
+                    <div>
+                        <a href="">Ver projetos</a>
+                    </div>
+                </div>
+                <div class="category-projetcs-card">
+                    <div>
+                        <img src="assets/images/icons/outros.png" alt="Outros">
+                    </div>
+                    <div>
+                        <h3>Outros</h3>
+                    </div>
+                    <div>
+                        <a href="">Ver projetos</a>
+                    </div>
+                </div>
+                <div class="category-projetcs-card">
+                    <div>
+                        <img src="assets/images/icons/exercicios.png" alt="exercicios">
+                    </div>
+                    <div>
+                        <h3>Exercícios</h3>
+                    </div>
+                    <div>
+                        <a href="">Ver projetos</a>
+                    </div>
+                </div>
             </div>
         </section>
+        <section id="contato" class="contact-section">
+            <div>
+                <h2>Contato</h2>
+            </div>
+            <div class="contact-form">
+                <form action="https://formsubmit.co/contato.juanpfr@gmail.com" method="POST">
+                    <div>
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="Seu email" required>
+                    </div>
+                    <div>
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Sua mensagem" maxlength="340" required></textarea>
+                    </div>
+
+                    <!-- Honeypot (campo invisível para bots) -->
+                    <input type="text" name="_honey" style="display: none !important;">
+
+                    <!-- Redireciona após enviar -->
+                    <input type="hidden" name="_next" value="https://juanpfr.github.io/portfolio/">
+
+                    <div>
+                        <div class="counter">
+                            <div>
+                                <span id="charCount">0</span>
+                            </div>
+                            <div>
+                                <p>/340 Caracteres</p>
+                            </div>
+                        </div><br>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Todos os direitos reservados Juan Pedro.</p>
+        </footer>
     </main>
 
     <!-- Meu Script -->
