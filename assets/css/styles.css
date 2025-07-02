@@ -45,7 +45,8 @@ nav {
 }
 
 nav.hide {
-  transform: translateY(-120px); /* sobe a navbar para fora da tela, altura do nav */
+    transform: translateY(-120px);
+    /* sobe a navbar para fora da tela, altura do nav */
 }
 
 nav .logo p {
@@ -610,6 +611,192 @@ main {
 
 .category-projetcs-card a:hover {
     background-color: #8a047b;
+}
+
+/* Projetos */
+/* Popup Fullscreen */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 0, 20, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 40px;
+    overflow-y: auto;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    width: 100%;
+    max-width: 1200px;
+    color: #fff;
+}
+
+.popup-content h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.popup-content h2#detalhe-nome{
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card {
+    background: #36022f;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projeto-card:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    background-color: #180115;
+}
+
+.projeto-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.3));
+    height: 170px;
+}
+
+.projeto-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.ver-mais-btn {
+    padding: 8px 15px;
+    background: #BF0BAD;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.ver-mais-btn:hover {
+    background: #8a047b;
+}
+
+.descricao {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.descricao.hidden {
+    display: none;
+}
+
+.popup-content.detalhe {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 100%;
+}
+
+.detalhe-image-desc {
+    display: flex;
+    gap: 30px;
+}
+
+.popup-content.detalhe img {
+    width: 60%;
+    border-radius: 12px;
+}
+
+#detalhe-descricao {
+    margin: 20px 0;
+    font-size: 1.2em;
+    line-height: 2.5;
+    text-align: left;
+}
+
+.tecnologias-list {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px 30px;
+    background: #36022f;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.tecnologias-list img {
+    width: 40px !important;
+    height: 40px;
+    border-radius: 0 !important;
+    object-fit: contain;
+    margin: 0 !important;
+}
+
+.close-btn-detalhe {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.botoes-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.botoes-links a {
+  padding: 10px 20px;
+  background-color: #BF0BAD;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.botoes-links a:hover {
+  background-color: #8a047b;
 }
 
 /* Contato */
