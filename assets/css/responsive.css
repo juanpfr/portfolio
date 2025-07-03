@@ -1,10 +1,35 @@
+/* Até 1469px */
+@media screen and (max-width: 1469px) {
+    .about-tech {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .about-tech-right {
+        margin-left: 0 !important;
+    }
+
+    .about-section {
+        max-width: 80%;
+    }
+
+    .contact-section {
+        width: 70%;
+    }
+}
+
 /* Até 992px */
 
-@media screen and (max-width: 992px){
-    nav ul.active{
+@media screen and (max-width: 992px) {
+    .main-section {
+        margin: 25% 0;
+    }
+
+    nav ul.active {
         display: flex;
     }
-    nav ul{
+
+    nav ul {
         display: none;
         position: fixed;
         top: 80px;
@@ -18,27 +43,43 @@
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
 
-    nav ul li a{
+    nav ul li a {
         font-size: 1.5em;
     }
 
-    ul.active{
+    ul.active {
         left: 0;
     }
 
-    .menu-icon{
+    .menu-icon {
         display: block;
     }
 
-    .main-section{
+    .main-section {
         z-index: -1;
+    }
+
+    .kanji-1 {
+        right: 9%;
+    }
+
+    .kanji-2 {
+        right: 4%;
+    }
+
+    .kanji-3 {
+        right: 11%;
+    }
+
+    .kanji-4 {
+        right: 3%;
     }
 
 }
 
 /* Até 767px */
-@media screen and (max-width: 767px){
-    nav{
+@media screen and (max-width: 767px) {
+    nav {
         padding: 0 50px;
     }
 
@@ -49,11 +90,91 @@
     .right-image {
         margin: 2rem;
     }
+
+    .about-content {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .about-fav-project {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .about-fav-project-content {
+        gap: 30px;
+    }
 }
 
 /* Até 567px */
-@media screen and (max-width: 567px){
-    nav ul li a{
+@media screen and (max-width: 567px) {
+    nav ul li a {
         font-size: 1.3em;
+    }
+
+    .about-section {
+        max-width: 90%;
+    }
+
+    .main-section {
+        margin: 40% 0;
+    }
+
+    .kanji-1 {
+        width: 100px;
+    }
+
+    .kanji-2 {
+        width: 80px;
+        bottom: 54%;
+        right: 1%;
+    }
+
+    .kanji-3 {
+        width: 60px;
+        bottom: 61%;
+    }
+
+    .kanji-4 {
+        width: 40px;
+        bottom: 70%;
+    }
+}
+
+/* Até 440px */
+@media screen and (max-width: 440px) {
+
+    .kanji-1 {
+        display: none;
+    }
+
+    .kanji-2 {
+        right: 10%;
+        bottom: 34%;
+    }
+
+    .kanji-3 {
+        display: none;
+    }
+
+    .kanji-4 {
+        bottom: 50%;
+    }
+
+    .about-fav-project-content>div {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .about-fav-project-image {
+        padding: 0;
+    }
+
+    .about-fav-project-image img {
+        max-width: 225px;
+    }
+
+    .about-fav-project-content>p {
+        line-height: 1.8;
     }
 }
