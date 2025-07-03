@@ -11,7 +11,7 @@ export const projetos = [
             { nome: 'JavaScript', icone: 'assets/images/icons/js.png' },
             { nome: 'PHP', icone: 'assets/images/icons/php.png' }
         ],
-        github: 'https://github.com/seuusuario/portfolio',
+        github: 'https://github.com/juanpfr/teacherCamila',
         deploy: null
     },
     {
@@ -25,14 +25,14 @@ export const projetos = [
             { nome: 'JavaScript', icone: 'assets/images/icons/js.png' },
             { nome: 'Python', icone: 'assets/images/icons/python.png' }
         ],
-        github: 'https://github.com/seuusuario/portfolio',
+        github: 'https://github.com/juanpfr/TakeOne',
         deploy: null
     },
     {
         categoria: 'web',
         nome: 'Portfólio',
         imagem: 'assets/images/projects/portfolio.png',
-        descricao: 'Meu site pessoal com HTML, CSS e JS.',
+        descricao: 'Meu site pessoal.',
         tecnologias: [
             { nome: 'HTML', icone: 'assets/images/icons/html-5.png' },
             { nome: 'CSS', icone: 'assets/images/icons/css-3.png' },
@@ -40,6 +40,31 @@ export const projetos = [
         ],
         github: 'https://github.com/juanpfr/portfolio',
         deploy: 'https://juanpfr.github.io/portfolio'
+    },
+    {
+        categoria: 'web',
+        nome: 'Sistema Solar',
+        imagem: 'assets/images/projects/projetosistemasolar.png',
+        descricao: 'Desafio do sistema solar feito apenas com linguagens de marcação.',
+        tecnologias: [
+            { nome: 'HTML', icone: 'assets/images/icons/html-5.png' },
+            { nome: 'CSS', icone: 'assets/images/icons/css-3.png' }
+        ],
+        github: 'https://github.com/juanpfr/sistemaSolar',
+        deploy: 'https://juanpfr.github.io/sistemaSolar'
+    },
+    {
+        categoria: 'web',
+        nome: 'Clínica Matarazzo',
+        imagem: 'assets/images/projects/clinicamatarazzo.png',
+        descricao: 'Site apenas front-end de uma clínica fictícia.',
+        tecnologias: [
+            { nome: 'HTML', icone: 'assets/images/icons/html-5.png' },
+            { nome: 'CSS', icone: 'assets/images/icons/css-3.png' },
+            { nome: 'JavaScript', icone: 'assets/images/icons/js.png' }
+        ],
+        github: 'https://github.com/juanpfr/sistemaSolar',
+        deploy: 'https://juanpfr.github.io/sistemaSolar'
     },
     // projetos de desenvolvimento desktop
     {
@@ -64,20 +89,27 @@ export const projetos = [
         github: 'https://github.com/juanpfr/autoMestre',
         deploy: null
     },
+    {
+        categoria: 'desktop',
+        nome: 'WebMotors Audi',
+        imagem: 'assets/images/projects/webmotorsaudi.png',
+        descricao: 'Aplicativo desktop para gerenciamento de carros da marca Audi dentro da loja',
+        tecnologias: [
+            { nome: 'Python', icone: 'assets/images/icons/python.png' }
+        ],
+        github: 'https://github.com/juanpfr/WebMotors-Audi',
+        deploy: null
+    },
     // outros projetos
     {
         categoria: 'outros',
-        nome: 'Jogo em Pygame',
-        imagem: 'assets/images/projetos/jogo.png',
-        descricao: 'Jogo 2D com fases e chefes.',
-        tecnologias: ['Python', 'Pygame']
-    },
-    // Exercícios para estudar
-    {
-        categoria: 'exercicios',
-        nome: 'Lista de Exercícios',
-        imagem: 'assets/images/projetos/exercicios.png',
-        descricao: 'Resolução de exercícios práticos.',
-        tecnologias: ['Python']
-    },
+        nome: 'Jogo Space Blaster',
+        imagem: 'assets/images/projects/space_blaster.png',
+        descricao: 'Jogo 2D "básico" em que você controla uma nave espacial e elimina os alienígenas para passar de fase! Com 6 níveis incluindo a fase do BOSS final e 3 dificuldades diferentes, cada uma com suas especificações.',
+        tecnologias: [
+            { nome: 'Python', icone: 'assets/images/icons/python.png' }
+        ],
+        github: 'https://github.com/juanpfr/Projeto-Pygame-Space',
+        deploy: null
+    }
 ];
