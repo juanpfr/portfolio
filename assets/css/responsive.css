@@ -106,6 +106,17 @@
     }
 }
 
+/* Até 680px */
+@media screen and (max-width: 680px) {
+    .detalhe-image-desc {
+        flex-direction: column;
+    }
+
+    .popup-content.detalhe img {
+        width: 100%;
+    }
+}
+
 /* Até 567px */
 @media screen and (max-width: 567px) {
     nav ul li a {
@@ -176,5 +187,17 @@
 
     .about-fav-project-content>p {
         line-height: 1.8;
+    }
+
+    .popup-content h2 {
+        margin-top: 50px;
+    }
+
+    .popup-content h2#detalhe-nome {
+        margin-top: 100px;
+    }
+
+    .botoes-links a{
+        margin-bottom: 40px;
     }
 }
