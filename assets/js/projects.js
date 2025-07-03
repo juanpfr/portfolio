@@ -3,7 +3,7 @@ export const projetos = [
     {
         categoria: 'web',
         nome: 'Teacher Camila',
-        imagem: 'assets/images/projects/projetoteachercamila.png',
+        imagem: 'assets/images/projects/projetoTeachercamila.png',
         descricao: 'Site com sistema de cadastro, login dos alunos agendamento de data e horário para cada alunos específico e contato para dúvidas.',
         tecnologias: [
             { nome: 'HTML', icone: 'assets/images/icons/html-5.png' },
