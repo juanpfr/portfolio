@@ -63,8 +63,8 @@ export const projetos = [
             { nome: 'CSS', icone: 'assets/images/icons/css-3.png' },
             { nome: 'JavaScript', icone: 'assets/images/icons/js.png' }
         ],
-        github: 'https://github.com/juanpfr/sistemaSolar',
-        deploy: 'https://juanpfr.github.io/sistemaSolar'
+        github: 'https://github.com/SENAI-Morvan-Figueiredo/ClinicaMatarazzo',
+        deploy: 'https://senai-morvan-figueiredo.github.io/ClinicaMatarazzo/'
     },
     // projetos de desenvolvimento desktop
     {
