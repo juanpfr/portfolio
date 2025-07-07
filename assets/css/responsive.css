@@ -77,8 +77,8 @@
 
 }
 
-/* Até 767px */
-@media screen and (max-width: 767px) {
+/* Até 768px */
+@media screen and (max-width: 768px) {
     nav {
         padding: 0 50px;
     }
@@ -104,10 +104,23 @@
     .about-fav-project-content {
         gap: 30px;
     }
+
+    .popup-content.detalhe{
+        justify-content: flex-start;
+    }
+
+    .detalhe-image-desc{
+        flex-direction: column;
+    }
 }
 
 /* Até 680px */
 @media screen and (max-width: 680px) {
+
+    .left-text div{
+        flex-direction: column;
+    }
+
     .detalhe-image-desc {
         flex-direction: column;
     }

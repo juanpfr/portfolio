@@ -156,21 +156,40 @@ main {
     margin-bottom: 30px;
 }
 
-.btn-download {
-    padding: 10px 20px;
-    background-color: #BF0BAD;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.3em;
-    transition: 0.3s;
-    display: inline-block;
+.left-text div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
-.btn-download:hover {
+.left-text div a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #BF0BAD;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+.left-text div a:hover {
     background-color: #8a047b;
     transform: scale(1.05);
+}
+
+.left-text div img {
+    width: 15px;
+}
+
+.left-text div p {
+    margin: 0;
+    font-size: 1.1em;
 }
 
 .right-image {
@@ -647,7 +666,7 @@ main {
     margin-bottom: 40px;
 }
 
-.popup-content h2#detalhe-nome{
+.popup-content h2#detalhe-nome {
     margin: 0;
 }
 
@@ -677,7 +696,7 @@ main {
     justify-content: space-between;
 }
 
-.projeto-card:hover{
+.projeto-card:hover {
     transform: scale(1.05);
     transition: 0.5s;
     border: 3px solid rgba(255, 255, 255, 0.6);
@@ -778,25 +797,25 @@ main {
 }
 
 .botoes-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .botoes-links a {
-  padding: 10px 20px;
-  background-color: #BF0BAD;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s;
+    padding: 10px 20px;
+    background-color: #BF0BAD;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 .botoes-links a:hover {
-  background-color: #8a047b;
+    background-color: #8a047b;
 }
 
 /* Contato */
