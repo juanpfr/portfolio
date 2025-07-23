@@ -11,7 +11,7 @@ export const projetos = [
             { nome: 'JavaScript', icone: 'assets/images/icons/js.png' },
             { nome: 'PHP', icone: 'assets/images/icons/php.png' }
         ],
-        github: 'https://github.com/juanpfr/teacherCamila',
+        github: 'https://github.com/juanpfr/teacher-camila',
         deploy: null
     },
     {
@@ -25,7 +25,7 @@ export const projetos = [
             { nome: 'JavaScript', icone: 'assets/images/icons/js.png' },
             { nome: 'Python', icone: 'assets/images/icons/python.png' }
         ],
-        github: 'https://github.com/juanpfr/TakeOne',
+        github: 'https://github.com/juanpfr/takeone',
         deploy: null
     },
     {
@@ -50,8 +50,8 @@ export const projetos = [
             { nome: 'HTML', icone: 'assets/images/icons/html-5.png' },
             { nome: 'CSS', icone: 'assets/images/icons/css-3.png' }
         ],
-        github: 'https://github.com/juanpfr/sistemaSolar',
-        deploy: 'https://juanpfr.github.io/sistemaSolar'
+        github: 'https://github.com/juanpfr/sistema-solar',
+        deploy: 'https://juanpfr.github.io/sistema-solar'
     },
     {
         categoria: 'web',
@@ -63,8 +63,8 @@ export const projetos = [
             { nome: 'CSS', icone: 'assets/images/icons/css-3.png' },
             { nome: 'JavaScript', icone: 'assets/images/icons/js.png' }
         ],
-        github: 'https://github.com/SENAI-Morvan-Figueiredo/ClinicaMatarazzo',
-        deploy: 'https://senai-morvan-figueiredo.github.io/ClinicaMatarazzo/'
+        github: 'https://github.com/juanpfr/clinica-matarazzo',
+        deploy: 'https://juanpfr.github.io/clinica-matarazzo/'
     },
     // projetos de desenvolvimento desktop
     {
@@ -75,7 +75,7 @@ export const projetos = [
         tecnologias: [
             { nome: 'CSHARP', icone: 'assets/images/icons/csharp.png' }
         ],
-        github: 'https://github.com/juanpfr/teacherCamilaDesktop',
+        github: 'https://github.com/juanpfr/teacher-camila-desktop',
         deploy: null
     },
     {
@@ -86,7 +86,7 @@ export const projetos = [
         tecnologias: [
             { nome: 'CSHARP', icone: 'assets/images/icons/csharp.png' }
         ],
-        github: 'https://github.com/juanpfr/autoMestre',
+        github: 'https://github.com/juanpfr/auto-mestre-desktop',
         deploy: null
     },
     {
@@ -97,7 +97,7 @@ export const projetos = [
         tecnologias: [
             { nome: 'Python', icone: 'assets/images/icons/python.png' }
         ],
-        github: 'https://github.com/juanpfr/WebMotors-Audi',
+        github: 'https://github.com/juanpfr/webmotors-audi',
         deploy: null
     },
     // outros projetos
@@ -109,7 +109,7 @@ export const projetos = [
         tecnologias: [
             { nome: 'Python', icone: 'assets/images/icons/python.png' }
         ],
-        github: 'https://github.com/juanpfr/Projeto-Pygame-Space',
+        github: 'https://github.com/juanpfr/space-blaster-pygame',
         deploy: null
     }
 ];
