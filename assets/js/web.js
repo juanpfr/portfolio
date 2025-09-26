@@ -1,10 +1,8 @@
-export const projetos = [
-    // Projetos de desenvolvimento web
+export const projetosWeb = [
     {
-        categoria: 'web',
         nome: 'Teacher Camila',
         imagem: 'assets/images/projects/projetoTeachercamila.png',
-        descricao: 'Site com sistema de cadastro, login dos alunos agendamento de data e horário para cada alunos específico e contato para dúvidas.',
+        descricao: 'Site com cadastro, login, agendamento de aulas e contato.',
         tecnologias: [
             { nome: 'HTML', icone: 'assets/images/icons/html-5.png' },
             { nome: 'CSS', icone: 'assets/images/icons/css-3.png' },
@@ -15,7 +13,6 @@ export const projetos = [
         deploy: null
     },
     {
-        categoria: 'web',
         nome: 'TakeOne',
         imagem: 'assets/images/projects/takeone.png',
         descricao: 'Site com sistema de cadastro, login dos clientes agendamento de data, horário, serviços, equipamentos, espaços e equipes personalizadas com funcinário da própria TakeOne, o cliente pode montar tudo do jeito que preferir, também salvar seus próprios equipamentos no seu perfil e contato para dúvidas.',
@@ -29,7 +26,6 @@ export const projetos = [
         deploy: null
     },
     {
-        categoria: 'web',
         nome: 'Portfólio',
         imagem: 'assets/images/projects/portfolio.png',
         descricao: 'Meu site pessoal.',
@@ -42,7 +38,6 @@ export const projetos = [
         deploy: 'https://juanpfr.github.io/portfolio'
     },
     {
-        categoria: 'web',
         nome: 'Sistema Solar',
         imagem: 'assets/images/projects/projetosistemasolar.png',
         descricao: 'Desafio do sistema solar feito apenas com linguagens de marcação.',
@@ -54,7 +49,6 @@ export const projetos = [
         deploy: 'https://juanpfr.github.io/sistema-solar'
     },
     {
-        categoria: 'web',
         nome: 'Clínica Matarazzo',
         imagem: 'assets/images/projects/clinicamatarazzo.png',
         descricao: 'Site apenas front-end de uma clínica fictícia.',
@@ -66,50 +60,58 @@ export const projetos = [
         github: 'https://github.com/juanpfr/clinica-matarazzo',
         deploy: 'https://juanpfr.github.io/clinica-matarazzo/'
     },
-    // projetos de desenvolvimento desktop
-    {
-        categoria: 'desktop',
-        nome: 'Teacher Camila Desktop',
-        imagem: 'assets/images/projects/projetoTeachercamilaDesktop.jpg',
-        descricao: 'Aplicativo desktop para gerenciamento dos alunos e de funcionalidades no site.',
-        tecnologias: [
-            { nome: 'CSHARP', icone: 'assets/images/icons/csharp.png' }
-        ],
-        github: 'https://github.com/juanpfr/teacher-camila-desktop',
-        deploy: null
-    },
-    {
-        categoria: 'desktop',
-        nome: 'Auto Mestre',
-        imagem: 'assets/images/projects/projetoAutoMestre.png',
-        descricao: 'Aplicativo desktop para gerenciamento dos clientes de funcionários da mecânica.',
-        tecnologias: [
-            { nome: 'CSHARP', icone: 'assets/images/icons/csharp.png' }
-        ],
-        github: 'https://github.com/juanpfr/auto-mestre-desktop',
-        deploy: null
-    },
-    {
-        categoria: 'desktop',
-        nome: 'WebMotors Audi',
-        imagem: 'assets/images/projects/webmotorsaudi.png',
-        descricao: 'Aplicativo desktop para gerenciamento de carros da marca Audi dentro da loja',
-        tecnologias: [
-            { nome: 'Python', icone: 'assets/images/icons/python.png' }
-        ],
-        github: 'https://github.com/juanpfr/webmotors-audi',
-        deploy: null
-    },
-    // outros projetos
-    {
-        categoria: 'outros',
-        nome: 'Jogo Space Blaster',
-        imagem: 'assets/images/projects/space_blaster.png',
-        descricao: 'Jogo 2D "básico" em que você controla uma nave espacial e elimina os alienígenas para passar de fase! Com 6 níveis incluindo a fase do BOSS final e 3 dificuldades diferentes, cada uma com suas especificações.',
-        tecnologias: [
-            { nome: 'Python', icone: 'assets/images/icons/python.png' }
-        ],
-        github: 'https://github.com/juanpfr/space-blaster-pygame',
-        deploy: null
-    }
 ];
+
+// Grid
+const grid = document.getElementById('projetos-grid');
+const popup = document.getElementById('popup-detalhes');
+const popupInfo = document.getElementById('popup-info');
+const fecharBtn = document.querySelector('.popup-fechar');
+
+// Render cards
+projetosWeb.forEach(p => {
+    const card = document.createElement('div');
+    card.classList.add('projeto-card');
+
+    card.innerHTML = `
+    <img src="${p.imagem}" alt="${p.nome}">
+    <h3>${p.nome}</h3>
+    <button class="ver-mais-btn">Ver detalhes</button>
+  `;
+
+    card.querySelector('.ver-mais-btn').addEventListener('click', () => abrirPopup(p));
+    grid.appendChild(card);
+});
+
+// Abrir popup
+function abrirPopup(p) {
+    popupInfo.innerHTML = `
+    <h2>${p.nome}</h2>
+    <img src="${p.imagem}" alt="${p.nome}" class="popup-img">
+    <p class="descricao">${p.descricao}</p>
+
+    <div class="tecnologias">
+      <h3>Tecnologias</h3>
+      <div class="tecnologias-list">
+        ${p.tecnologias.map(t => `
+          <img src="${t.icone}" alt="${t.nome}" title="${t.nome}">
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="botoes-links">
+      ${p.github ? `<a href="${p.github}" target="_blank" class="btn">GitHub</a>` : ''}
+      ${p.deploy ? `<a href="${p.deploy}" target="_blank" class="btn">Ver Deploy</a>` : ''}
+    </div>
+  `;
+    popup.classList.add('ativo');
+}
+
+// Fechar popup
+fecharBtn.addEventListener('click', () => {
+    popup.classList.remove('ativo');
+});
+
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) popup.classList.remove('ativo');
+});

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,19 +26,21 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
 
-    <!-- Meu CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Index CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
-    <header id="inicio">
+    <header>
         <nav>
-            <div class="logo">
-                <p>Juanpfr</p>
-            </div>
+            <a href="index.html">
+                <div class="logo">
+                    <p>Juanpfr</p>
+                </div>
+            </a>
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -53,7 +55,7 @@
         <section class="main-section">
             <div class="left-text animate__animated animate__fadeInLeftBig">
                 <h1>Bem-vindo ao meu portfólio!</h1>
-                <p>Juan Pedro, Desenvolvedor web.</p>
+                <p>Juan Pedro, Desenvolvedor Backend & Mobile.</p>
                 
                 <div>
                     <a href="https://github.com/juanpfr" target="_blank" rel="noopener noreferrer">
@@ -82,6 +84,7 @@
             </div>
         </section>
         <div id="sobre"></div>
+
         <!-- sobre -->
         <section class="about-section">
             <div class="about-content">
@@ -231,6 +234,7 @@
                 </div>
             </div>
         </section>
+
         <!-- projetos -->
         <section id="projetos" class="category-project-section">
             <div>
@@ -245,7 +249,7 @@
                         <h3>Desenvolvimento Web</h3>
                     </div>
                     <div>
-                        <a href="#" data-category="web">Ver projetos</a>
+                        <a href="web.html">Ver projetos</a>
                     </div>
                 </div>
                 <div class="category-projetcs-card">
@@ -253,10 +257,10 @@
                         <img src="assets/images/icons/desenvolvimento_desktop.png" alt="Desenvolvimento desktop">
                     </div>
                     <div>
-                        <h3>Desenvolvimento Desktop</h3>
+                        <h3>Desktop & Mobile</h3>
                     </div>
                     <div>
-                        <a href="#" data-category="desktop">Ver projetos</a>
+                        <a href="desktop_mobile.html">Ver projetos</a>
                     </div>
                 </div>
                 <div class="category-projetcs-card">
@@ -264,14 +268,15 @@
                         <img src="assets/images/icons/outros.png" alt="Outros">
                     </div>
                     <div>
-                        <h3>Outros: Back-End</h3>
+                        <h3>Outros Projetos</h3>
                     </div>
                     <div>
-                        <a href="#" data-category="outros">Ver projetos</a>
+                        <a href="outros.html">Ver projetos</a>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- popup -->
         <div id="popup-projetos" class="popup hidden">
             <div class="popup-content">
@@ -282,6 +287,7 @@
                 </div>
             </div>
         </div>
+
         <!-- detalhes do projeto -->
         <div id="popup-detalhe" class="popup hidden">
             <div class="popup-content detalhe">
@@ -295,13 +301,14 @@
                 <div id="detalhe-botoes" class="botoes-links"></div>
             </div>
         </div>
+
         <!-- contato -->
         <section id="contato" class="contact-section">
             <div>
                 <h2>Contato</h2>
             </div>
             <div class="contact-form">
-                <form action="https://formsubmit.co/contato.juanpfr@gmail.com" method="POST">
+                <form action="https://formsubmit.co/juanpedrofrediani04@gmail.com" method="POST">
                     <div>
                         <label for="name">Nome</label>
                         <input type="text" name="name" placeholder="Seu nome" required>
@@ -336,10 +343,12 @@
                 </form>
             </div>
         </section>
-        <footer>
-            <p>&copy; 2025 Todos os direitos reservados Juan Pedro.</p>
-        </footer>
     </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Todos os direitos reservados Juan Pedro.</p>
+    </footer>
 
     <!-- Meu Script -->
     <script type="module" src="assets/js/scripts.js"></script>
